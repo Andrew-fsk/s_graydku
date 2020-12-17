@@ -23,7 +23,7 @@ body {
 }
 @media (min-width: 1400px) {
   .container {
-    width: 1290px;
+    width: 1170px;
   }
 }
 @media (min-width: 1200px) and (max-width: 1399px) {
@@ -122,19 +122,9 @@ body {
 }
 
 @font-face {
-  font-family: "ProximaNova";
+  font-family: "Missy BT C";
   font-weight: 400;
-  src: url("/fonts/ProximaNova-Regular.ttf") format("truetype"), url("/fonts/ProximaNova-Regular.woff") format("woff"), url("/fonts/ProximaNova-Regular.woff2") format("woff2");
-}
-@font-face {
-  font-family: "ProximaNova";
-  font-weight: 300;
-  src: url("/fonts/ProximaNova-Thin.ttf") format("truetype"), url("/fonts/ProximaNova-Thin.woff") format("woff"), url("/fonts/ProximaNova-Thin.woff2") format("woff2");
-}
-@font-face {
-  font-family: "ProximaNova";
-  font-weight: 600;
-  src: url("/fonts/ProximaNova-SemiBold.ttf") format("truetype"), url("/fonts/ProximaNova-SemiBold.woff") format("woff"), url("/fonts/ProximaNova-SemiBold.woff2") format("woff2");
+  src: url("../fonts/Missy BT C.otf") format("truetype");
 }
 * {
   margin: 0;
