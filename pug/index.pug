@@ -6,3 +6,12 @@ block content
             a(href='#').item
                 img(src='../images/catalog.png')
                 .title Название
+    .main-slider-wrap
+        .container
+            .main-slider
+                each value in Array(4)
+                    .slide.object-fit
+                        img(src='../images/slide.png')
+                        .title Быстрая доставка продуктов
+                        .description  Краткое описание
+                        a(href="#").more-slide Подробнее

@@ -53,4 +53,24 @@ $(document).ready(function () {
             }
         ]
     });
+
+    $('.main-slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        fade: false,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        arrows: true,
+        swipeToSlide: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
 })

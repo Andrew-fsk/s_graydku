@@ -19,3 +19,123 @@
     max-height: 165px;
   }
 }
+
+.main-slider-wrap{
+  padding: 25px 0 40px 0;
+  .container{
+    @include breakpoint(smxs){
+      padding: 0;
+    }
+  }
+}
+
+.main-slider{
+  padding: 0 60px;
+  margin: 0 -60px;
+  padding-bottom: 60px;
+  position: relative;
+  @include breakpoint(lg){
+    margin: 0;
+    padding: 0;
+    padding-bottom: 60px;
+  }
+  @include breakpoint(md-down){
+    margin: 0;
+    padding: 0;
+    padding-bottom: 60px;
+  }
+  @include breakpoint(sm-down){
+    padding-bottom: 30px;
+  }
+  .slick-dots{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    @include flexbox;
+    @include justify-content(center);
+    li{
+      margin: 0 15px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #e2e4d7;
+      transition: all .2s;
+      &.slick-active{
+        background-color: #ff7a2d;
+      }
+
+    }
+  }
+  .slick-list{
+    margin: 0 -12px;
+    @include breakpoint(lg){
+      padding: 0;
+      margin: 0 25px;
+    }
+    @include breakpoint(md-down){
+      padding: 0;
+      margin: 0 25px;
+    }
+  }
+  .slide{
+    margin: 0 12px;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    height: 330px;
+    @include flexbox;
+    @include flex-direction(column);
+    @include justify-content(flex-end);
+    @include align-items(flex-start);
+    padding: 30px 40px;
+    @include breakpoint(sm-down){
+      padding: 10px;
+      margin: 0 5px;
+      height: 200px;
+    }
+  }
+  .title,.more-slide,.description{
+    position: relative;
+    z-index: 1;
+  }
+  .title{
+    font-size: 31px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    @include breakpoint(smxs){
+      font-size: 22px;
+    }
+  }
+  .description{
+    height: 50px;
+    font-size: 14px;
+  }
+  .more-slide{
+    font-size: 14px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #89b64e;
+    border-radius: 25px;
+    padding: 20px 50px;
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(cetner);
+  }
+  .slick-arrow{
+    height: 57px;
+    width: 26px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: calc(50% - 75px);
+    background-image: url("../images/svg/right-arrow.svg");
+  }
+  .slick-prev{
+    left: 0;
+    @include rotate(180);
+  }
+  .slick-next{
+    right: 0;
+  }
+}
