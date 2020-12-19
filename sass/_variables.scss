@@ -1,7 +1,7 @@
 $font-family-alt: 'Missy BT C', sans-serif;
 $font-family: 'Ubuntu', sans-serif;
 $font-family-validation: $font-family;
-$font-family-headings: $font-family;
+$font-family-headings: $font-family-alt;
 
 $text-color: #282828;
 $font-size: 16px;
@@ -11,9 +11,9 @@ $paragraph-height: 1.5;  //line-height
 $paragraph-color: $text-color;
 $list-image: false;  //list.png
 
-$heading-margin: 50, 35 , 48, 46, 44, 42;
-$heading-font-size: 64, 48 , 36 , 28, 26, 24;
-$heading-font-weight: 600,600,600,600,600,600; // 1 = "normal"(400)
+$heading-margin: 50, 50 , 48, 46, 44, 42;
+$heading-font-size: 64, 41 , 36 , 28, 26, 24;
+$heading-font-weight: 400,400,400,400,400,400; // 1 = "normal"(400)
 $heading-uppercase: 0,0,0,0,0,0; // 0 = "none", 1 = "uppercase"
 $heading-text-align: c,c,c,c,c,c; // c = "center", l = "left", r = "right"
 $heading-color: $text-color;
@@ -24,7 +24,7 @@ $sm-heading-margin: 50, 35, true, true, true, false;
 $sm-heading-font-size: 40, 30, 24, true, true, false;
 // XS Heading sizes
 $xs-heading-change: true;
-$xs-heading-margin: true, true, true, true, false, false;
+$xs-heading-margin: 20, 15, true, true, false, false;
 $xs-heading-font-size: 28, 26, 24, 22, 20, 18;
 
 

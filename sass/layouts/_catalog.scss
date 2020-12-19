@@ -47,25 +47,7 @@
   @include breakpoint(sm-down){
     padding-bottom: 30px;
   }
-  .slick-dots{
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    @include flexbox;
-    @include justify-content(center);
-    li{
-      margin: 0 15px;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background-color: #e2e4d7;
-      transition: all .2s;
-      &.slick-active{
-        background-color: #ff7a2d;
-      }
 
-    }
-  }
   .slick-list{
     margin: 0 -12px;
     @include breakpoint(lg){
@@ -121,6 +103,11 @@
     @include align-items(center);
     @include justify-content(cetner);
   }
+
+}
+
+.slider{
+
   .slick-arrow{
     height: 57px;
     width: 26px;
@@ -137,5 +124,124 @@
   }
   .slick-next{
     right: 0;
+  }
+
+  .slick-dots{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    @include flexbox;
+    @include flex-wrap(wrap);
+    @include justify-content(center);
+    li{
+      margin: 0 15px 10px 15px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #e2e4d7;
+      transition: all .2s;
+      &.slick-active{
+        background-color: #ff7a2d;
+      }
+
+    }
+  }
+}
+
+.popular-slider-wrap{
+  background-color: #ebecee;
+  padding: 50px 0;
+  &.special{
+    background-color: initial;
+    .item-preview .bottom-info{
+      background-color: #ebecee;
+    }
+    h2{
+      color:#ff7a2d;
+    }
+  }
+}
+
+.popular-slider{
+  padding: 0 60px;
+  margin: 0 -60px;
+  padding-bottom: 30px;
+  position: relative;
+  @include breakpoint(lg){
+    margin: 0;
+    padding: 0;
+    padding-bottom: 60px;
+  }
+  @include breakpoint(md-down){
+    margin: 0;
+    padding: 0;
+    padding-bottom: 60px;
+  }
+  @include breakpoint(sm-down){
+    padding-bottom: 30px;
+  }
+  .slick-list{
+    margin: 0 -15px;
+    @include breakpoint(lg){
+      padding: 0;
+      margin: 0 25px;
+    }
+    @include breakpoint(md-down){
+      padding: 0;
+      margin: 0 25px;
+    }
+  }
+  .item-preview{
+    margin: 0 15px;
+    @include breakpoint(smxs){
+      margin: 0 5px;
+    }
+  }
+  .slide{
+    padding-bottom: 30px;
+  }
+}
+
+.all-catalog-wrap{
+  padding: 50px 0;
+}
+
+.catalog-list{
+  @include flexbox;
+  @include flex-wrap(wrap);
+  margin: 0 -15px;
+  .item{
+    text-decoration: none;
+    width: calc(25% - 30px);
+    margin: 0 15px 30px 15px;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: #ebecee;
+    @include breakpoint(sm-down){
+      width: calc(50% - 30px);
+      margin-bottom: 15px;
+    }
+    @include breakpoint(smxs){
+      width: calc(100% - 30px);
+    }
+  }
+  .bottom-info{
+    padding: 10px;
+  }
+  .img{
+    height: 200px;
+    position: relative;
+  }
+  .title{
+    text-align: center;
+    font-size: 19px;
+    font-weight: bold;
+    color: $text-color;
+    margin-bottom: 3px;
+  }
+  .description{
+    font-size: 14px;
+    color: #858585;
+    text-align: center;
   }
 }

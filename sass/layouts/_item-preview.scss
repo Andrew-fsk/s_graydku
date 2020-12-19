@@ -1,0 +1,147 @@
+.item-preview {
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+
+  .item-image {
+    height: 230px;
+    width: 100%;
+    position: relative;
+    display: block;
+  }
+
+  .bottom-info {
+    background-color: #ffffff;
+    padding: 20px;
+  }
+
+  .week-list {
+    position: absolute;
+    color: #ffffff;
+    @include flexbox;
+    bottom: 5px;
+    left: 10px;
+
+    .day {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      color: #ffffff;
+      font-size: 10px;
+      @include flexbox;
+      @include align-items(center);
+      @include justify-content(center);
+      margin: 0 2px;
+    }
+
+    .day-1 {
+      background-color: #f47691;
+
+    }
+
+    .day-2 {
+      background-color: #ec8c53;
+
+    }
+
+    .day-3 {
+      background-color: #f1c54b;
+
+    }
+
+    .day-4 {
+      background-color: #85a848;
+
+    }
+
+    .day-5 {
+      background-color: #85b4e5;
+
+    }
+
+    .day-6 {
+      background-color: #297ac9;
+
+    }
+
+    .day-7 {
+      background-color: #ba55e5;
+    }
+  }
+
+  .title {
+    text-decoration: none;
+    color: $text-color;
+    font-size: 19px;
+    font-weight: 600;
+  }
+
+  .description {
+    color: #858585;
+    font-size: 14px;
+    height: 60px;
+  }
+  .price{
+    margin-bottom: 10px;
+    .count{
+      color: #ff7a2d;
+      font-size: 19px;
+    }
+    span{
+      font-weight: bold;
+      font-size: 19px;
+    }
+    font-size: 14px;
+  }
+  .rating{
+    @include flexbox;
+    img{
+      width: 14px;
+      height: 14px;
+      margin-right: 2px;
+    }
+  }
+  .bottom-row{
+    @include flexbox;
+    @include align-items(flex-start);
+    @include justify-content(space-between);
+  }
+  .buy-button{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #ff7a2d;
+    position: relative;
+    &:after{
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 38px;
+      height: 37px;
+      background-size: 16px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #ff7a2d;
+      border-radius: 50%;
+      background-image: url("../images/cart.png");
+    }
+  }
+  .old-price{
+    position: relative;
+    font-weight: bold;
+    font-size: 14px;
+    &:after{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 70%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-image: url("../images/old price.png");
+    }
+  }
+}
