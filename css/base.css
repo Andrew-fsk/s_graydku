@@ -46,6 +46,16 @@ body {
   width: 100vw;
   max-width: 100%;
 }
+@media (max-width: 1024px) {
+  body {
+    padding-top: 66px;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  body {
+    padding-top: 66px;
+  }
+}
 body.fancybox-iosfix {
   position: relative !important;
   left: 0;

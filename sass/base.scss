@@ -25,6 +25,9 @@ body {
   color: $text-color;
   width: 100vw;
   max-width: 100%;
+  @include breakpoint(sm-down){
+    padding-top: 66px;
+  }
   &.fancybox-iosfix {
     position: relative !important;
     left: 0;
