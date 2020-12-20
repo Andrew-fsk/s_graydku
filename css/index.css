@@ -882,6 +882,16 @@ header .cart-preview .title {
 .main-slider-wrap {
   padding: 25px 0 40px 0;
 }
+@media (max-width: 1024px) {
+  .main-slider-wrap {
+    padding: 25px 0;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .main-slider-wrap {
+    padding: 25px 0;
+  }
+}
 @media (max-width: 500px) {
   .main-slider-wrap .container {
     padding: 0;
@@ -1069,6 +1079,11 @@ header .cart-preview .title {
 .popular-slider-wrap {
   background-color: #ebecee;
   padding: 50px 0;
+}
+@media (max-width: 500px) {
+  .popular-slider-wrap .container {
+    padding: 0;
+  }
 }
 .popular-slider-wrap.special {
   background-color: initial;
@@ -1355,6 +1370,323 @@ header .cart-preview .title {
   background-position: center;
   background-size: contain;
   background-image: url("../images/old price.png");
+}
+
+.about-wrap {
+  background-size: contain;
+  background-image: url("../images/about.png");
+  padding: 80px 0;
+  color: #ffffff;
+}
+.about-wrap h2 {
+  color: #ffffff;
+}
+@media (max-width: 1024px) {
+  .about-wrap {
+    padding: 50px 0;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .about-wrap {
+    padding: 50px 0;
+  }
+}
+
+.text-about {
+  text-align: center;
+  max-width: 80%;
+  margin: 0 auto 50px auto;
+}
+@media (max-width: 1024px) {
+  .text-about {
+    max-width: 100%;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .text-about {
+    max-width: 100%;
+  }
+}
+.text-about span {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.about-list {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.about-list .item {
+  width: 33.33%;
+  padding: 0 10px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  position: relative;
+}
+@media (max-width: 1024px) {
+  .about-list .item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .about-list .item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+.about-list .item:last-of-type:after {
+  content: initial;
+}
+.about-list .item:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 75px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+@media (max-width: 1024px) {
+  .about-list .item:after {
+    content: initial;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .about-list .item:after {
+    content: initial;
+  }
+}
+.about-list .item .icon {
+  width: 130px;
+  height: 130px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  background-color: #ff7a2d;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+.about-list .item .icon img {
+  max-width: 80%;
+}
+.about-list .item .title {
+  font-family: "Missy BT C", sans-serif;
+  font-size: 31px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  .about-list .item .title {
+    font-size: 22px;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .about-list .item .title {
+    font-size: 22px;
+  }
+}
+.about-list .item .text {
+  text-align: center;
+  line-height: 1.5;
+}
+
+.farmers-block-wrap {
+  padding: 50px 0;
+  background-color: #ebecee;
+}
+@media (max-width: 1024px) {
+  .farmers-block-wrap {
+    padding: 25px 0;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .farmers-block-wrap {
+    padding: 25px 0;
+  }
+}
+@media (max-width: 500px) {
+  .farmers-block-wrap .container {
+    padding: 0;
+  }
+}
+
+.farmers-slider {
+  padding: 0 60px;
+  margin: 0 -60px;
+  padding-bottom: 60px;
+  position: relative;
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .farmers-slider {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 60px;
+  }
+}
+@media (max-width: 1199px) {
+  .farmers-slider {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 60px;
+  }
+}
+@media (max-width: 1024px) {
+  .farmers-slider {
+    padding-bottom: 30px;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .farmers-slider {
+    padding-bottom: 30px;
+  }
+}
+.farmers-slider .slick-list {
+  margin: 0 -12px;
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .farmers-slider .slick-list {
+    padding: 0;
+    margin: 0 25px;
+  }
+}
+@media (max-width: 1199px) {
+  .farmers-slider .slick-list {
+    padding: 0;
+    margin: 0 25px;
+  }
+}
+
+.farmer-card {
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 0 15px 30px 15px;
+}
+@media (max-width: 500px) {
+  .farmer-card {
+    padding: 10px;
+  }
+}
+.farmer-card .img {
+  position: relative;
+  height: 150px;
+  border-radius: 25px;
+  overflow: hidden;
+  width: calc(50% - 10px);
+}
+@media (max-width: 1199px) {
+  .farmer-card .img {
+    height: 100px;
+  }
+}
+@media (max-width: 1199px) {
+  .farmer-card .img {
+    height: 200px;
+  }
+}
+@media (max-width: 500px) {
+  .farmer-card .img {
+    height: 100px;
+  }
+}
+.farmer-card .img:first-of-type {
+  margin-right: 10px;
+}
+@media (max-width: 500px) {
+  .farmer-card .img:first-of-type {
+    margin-right: 5px;
+  }
+}
+.farmer-card .img:last-of-type {
+  margin-left: 10px;
+}
+@media (max-width: 500px) {
+  .farmer-card .img:last-of-type {
+    margin-left: 5px;
+  }
+}
+.farmer-card .images {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.farmer-card .top {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  margin-bottom: 13px;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+@media (max-width: 600px) {
+  .farmer-card .top {
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+.farmer-card .img-person {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  overflow: hidden;
+  margin-right: 25px;
+  border-radius: 50%;
+}
+@media (max-width: 600px) {
+  .farmer-card .img-person {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+.farmer-card .name {
+  color: #282828;
+  text-decoration: none;
+  font-size: 19px;
+}
+.farmer-card .text {
+  color: #858585;
+  font-size: 14px;
 }
 
 /*# sourceMappingURL=index.css.map */

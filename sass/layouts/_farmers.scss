@@ -1,0 +1,117 @@
+.farmers-block-wrap {
+  padding: 50px 0;
+  @include breakpoint(sm-down) {
+    padding: 25px 0;
+  }
+  background-color: #ebecee;
+  @include breakpoint(smxs){
+    .container{
+      padding: 0;
+    }
+  }
+}
+
+.farmers-slider {
+  padding: 0 60px;
+  margin: 0 -60px;
+  padding-bottom: 60px;
+  position: relative;
+  @include breakpoint(lg) {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 60px;
+  }
+  @include breakpoint(md-down) {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 60px;
+  }
+  @include breakpoint(sm-down) {
+    padding-bottom: 30px;
+  }
+
+  .slick-list {
+    margin: 0 -12px;
+    @include breakpoint(lg) {
+      padding: 0;
+      margin: 0 25px;
+    }
+    @include breakpoint(md-down) {
+      padding: 0;
+      margin: 0 25px;
+    }
+  }
+}
+
+.farmer-card {
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 0 15px 30px 15px;
+  @include breakpoint(smxs){
+    padding: 10px;
+  }
+  .img {
+    position: relative;
+    height: 150px;
+    border-radius: 25px;
+    overflow: hidden;
+    width: calc(50% - 10px);
+    @include breakpoint(md-down){
+      height: 100px;
+    }
+    @include breakpoint(md-down){
+      height: 200px;
+    }
+    @include breakpoint(smxs){
+      height: 100px;
+    }
+    &:first-of-type{
+      margin-right: 10px;
+      @include breakpoint(smxs){
+        margin-right: 5px;
+      }
+      }
+    &:last-of-type{
+      margin-left: 10px;
+      @include breakpoint(smxs) {
+        margin-left: 5px;
+      }
+      }
+  }
+
+  .images {
+    @include flexbox;
+  }
+  .top{
+    @include flexbox;
+    margin-bottom: 13px;
+    @include align-items(center);
+    @include breakpoint(mxs){
+      @include flex-direction(column);
+    }
+  }
+  .img-person{
+    width: 60px;
+    height: 60px;
+    position: relative;
+    overflow: hidden;
+    margin-right: 25px;
+    border-radius: 50%;
+    @include breakpoint(mxs){
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+  .name{
+    color: $text-color;
+    text-decoration: none;
+    font-size: 19px;
+  }
+  .text{
+    color: #858585;
+    font-size: 14px;
+  }
+}

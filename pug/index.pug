@@ -26,7 +26,7 @@ block content
                                 img(src="../images/tomato.jpg")
                                 .week-list
                                     each value, index in ['ПН','ВТ','СР','ЧТ','ПТ','СБ','ВС']
-                                        .day(class="day-" + (index+1))= value
+                                        .day(class="day-" + (index + 1))= value
                             .bottom-info
                                 a(href="#").title Помидоры спелые, сочные
                                 .description от кооператива «Селянин»
@@ -40,6 +40,36 @@ block content
                                                 else
                                                     img(src='../images/svg/no-star.svg')
                                     a(href="#").buy-button
+    .about-wrap
+        .container
+            h2  О нас
+            .text-about <span>Фермерские продукты из интернет-магазина «с грядки.kz»  </span><br> — это сочные фрукты и овощи, пышные булочки из семейных пекарен, жирные сливки из молока домашних коров и ароматные колбасы. Мы сократили путь между производителями и покупателями,чтобы на вашем столе были только самые свежие продукты.
+            .about-list
+                each value in Array(3)
+                    .item
+                        .icon
+                            img(src="../images/svg/hat.svg")
+                        .title Топ фермеры
+                        .text — Более 1500 продуктов от 150 малых производителей на одном сайте.
+    .farmers-block-wrap
+        .container
+            h2 Фермеры
+            .farmers-slider.slider
+                each value in Array(5)
+                    .farmer-card
+                        .top
+                            .img-person.object-fit
+                                img(src='../images/farmer.jpg')
+                            .text-info
+                                a(href="#").name Имя фамилия
+                                .text поставщик овощей
+                        .images
+                            .img.object-fit
+                                img(src='../images/tomato.jpg')
+                            .img.object-fit
+                                img(src='../images/tomato.jpg')
+
+
     .all-catalog-wrap
         .container
             h2 Весь асортимент
@@ -63,7 +93,7 @@ block content
                                 img(src="../images/tomato.jpg")
                                 .week-list
                                     each value, index in ['ПН','ВТ','СР','ЧТ','ПТ','СБ','ВС']
-                                        .day(class="day-" + (index+1))= value
+                                        .day(class="day-" + (index + 1))= value
                             .bottom-info
                                 a(href="#").title Помидоры спелые, сочные
                                 .description от кооператива «Селянин»

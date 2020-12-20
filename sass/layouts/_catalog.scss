@@ -22,6 +22,9 @@
 
 .main-slider-wrap{
   padding: 25px 0 40px 0;
+  @include breakpoint(sm-down){
+    padding: 25px 0;
+  }
   .container{
     @include breakpoint(smxs){
       padding: 0;
@@ -151,6 +154,11 @@
 .popular-slider-wrap{
   background-color: #ebecee;
   padding: 50px 0;
+  @include breakpoint(smxs){
+    .container{
+      padding: 0;
+    }
+  }
   &.special{
     background-color: initial;
     .item-preview .bottom-info{
