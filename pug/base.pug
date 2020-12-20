@@ -9,6 +9,11 @@ html(lang="en")
     body
         .wrap
             include block/header.pug
+            .catalog-top
+                each value in Array(9)
+                    a(href='#').item
+                        img(src='../images/catalog.png')
+                        .title Название
             block content
         include block/footer.pug
         include block/scripts.pug

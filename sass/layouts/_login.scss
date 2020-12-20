@@ -1,0 +1,109 @@
+.login-page {
+  padding-top: 50px;
+  @include breakpoint(sm-down) {
+    padding-top: 25px;
+  }
+
+  .login-text {
+    text-align: center;
+
+    a {
+      color: $text-color;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+}
+
+.form-wrap {
+  padding-top: 50px;
+  @include flexbox;
+  @include flex-wrap(wrap);
+
+  .left {
+    width: 40%;
+    padding-right: 15px;
+    @include breakpoint(sm-down) {
+      width: 100%;
+      padding-right: 0;
+    }
+  }
+
+  .right {
+    padding-left: 15px;
+    width: 60%;
+
+    @include breakpoint(sm-down) {
+      width: 100%;
+      padding-left: 0;
+    }
+
+    .top {
+      @include flexbox;
+@include breakpoint(smxs){
+  @include flex-direction(column);
+}
+      .input-field {
+        width: calc(50% - 15px);
+        @include breakpoint(smxs){
+          width: 100%;
+        }
+
+        &:first-of-type {
+          margin-right: 15px;
+          @include breakpoint(smxs){
+            margin-right: 0;
+          }
+        }
+
+        &:last-of-type {
+          margin-left: 15px;
+
+          @include breakpoint(smxs){
+            margin-left: 0;
+          }
+
+          input {
+            background-color: #fff1ea;
+          }
+        }
+      }
+    }
+  }
+
+  .button-wrap {
+    width: 100%;
+    @include justify-content(center);
+    @include flexbox;
+
+    .button {
+      @include justify-content(center);
+      @include flexbox;
+      @include align-items(center);
+      width: 260px;
+      padding: 20px;
+      border-radius: 25px;
+      background-color: #ff7a2d;
+
+      span {
+        color: #ffffff;
+        font-size: 14px;
+      }
+
+      input {
+        display: none;
+      }
+    }
+  }
+}
+
+.input-field {
+  margin-bottom: 20px;
+
+  input {
+    width: 100%;
+    border-radius: 25px;
+    border: 2px solid #e2e4d7;
+    padding: 20px 30px;
+  }
+}

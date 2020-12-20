@@ -1,0 +1,25 @@
+extends base
+
+block content
+    .container
+        .login-page
+            h1 Вход или регистрация
+            .login-text Введите <a href="#">логин</a>, чтобы войти, либо зарегистрироваться, если у вас нет аккаунта.
+            .form-wrap.last-block
+                .left
+                    .input-field
+                        input(placeholder='Login')
+                    .input-field
+                        input(placeholder='Email')
+                .right
+                    .top
+                        .input-field
+                            input(placeholder='Password')
+                        .input-field
+                            input(placeholder='Password confirm')
+                    .input-field
+                        input(placeholder='Address')
+                .button-wrap
+                    .button
+                        span Отправить
+                        input(type="submit")
