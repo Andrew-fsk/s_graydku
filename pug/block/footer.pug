@@ -1,3 +1,41 @@
 footer
     .container
-        h1 footer
+        .top-footer
+            .column
+                .title Для клиетнов
+                ul
+                    each value in Array(6)
+                        li
+                            a(href="#") Пункт меню
+            .column
+                .top
+                    .title О компании
+                    ul
+                        each value in Array(4)
+                            li
+                                a(href="#") Пункт меню
+            .column
+                .top
+                    .title Партнёры
+                    ul
+                        each value in Array(2)
+                            li
+                                a(href="#") Пункт меню
+                .visa
+                    img(src='../images/visa.png')
+            .column
+                .top
+                    a(href='tel:+7 727 328 34 05').main-phone +7 727 328 34 05
+                    a(href='tel:+7 727 328 34 05').main-phone +7 727 328 34 05
+                    .work-time Ежедневно с 10 до 20
+                    a(href="mailto:feedback@sgryadki.kz").mail feedback@sgryadki.kz
+                .social-list
+                    a(href="#").social-link.vk
+                    a(href="#").social-link.youtube
+                    a(href="#").social-link.facebook
+                    a(href="#").social-link.inst
+    .bottom-footer
+        .container
+            .copyriting © 2020. с Грядки.kz
+            a(href="#").sitemap Карта сайта
+            a(href="#").politics Политика конфиденциальности

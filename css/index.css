@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   padding: 0;
 }
@@ -1722,6 +1723,16 @@ header .cart-preview .title {
   background-size: contain;
 }
 @media (max-width: 1024px) {
+  .last-block:after {
+    content: initial;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .last-block:after {
+    content: initial;
+  }
+}
+@media (max-width: 1024px) {
   .last-block {
     padding-bottom: 25px;
   }
@@ -1790,6 +1801,255 @@ header .cart-preview .title {
 }
 .question:nth-of-type(4):before {
   background-color: #a9ffed;
+}
+
+footer {
+  background-color: #89b64e;
+}
+footer .top-footer {
+  padding: 25px 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+footer .top-footer .column {
+  width: 25%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: space-between;
+}
+@media (max-width: 1024px) {
+  footer .top-footer .column {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  footer .top-footer .column {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 600px) {
+  footer .top-footer .column {
+    width: 100%;
+  }
+}
+footer .top-footer .column .top {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+footer .top-footer .title {
+  font-size: 19px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+footer .top-footer ul {
+  margin: 0;
+  list-style: none;
+}
+footer .top-footer ul li {
+  margin-left: 0;
+  padding-left: 15px;
+  position: relative;
+  margin-bottom: 10px;
+}
+footer .top-footer ul li:before {
+  content: "•";
+  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #ffffff;
+  /* Change the color */
+  font-weight: bold;
+  /* If you want it to be bold */
+  display: inline-block;
+  /* Needed to add space between the bullet and the text */
+  width: 1em;
+  /* Also needed for space (tweak if needed) */
+  margin-left: -1em;
+}
+footer .top-footer ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+footer .bottom-footer {
+  padding: 20px 0;
+  border-top: 1px solid #ffffff;
+  background-image: url("../images/decor.png");
+}
+footer .bottom-footer .container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+@media (max-width: 600px) {
+  footer .bottom-footer .container {
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+footer .bottom-footer .copyriting {
+  margin-right: 170px;
+  color: #ffffff;
+}
+@media (max-width: 1024px) {
+  footer .bottom-footer .copyriting {
+    margin-right: 40px;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  footer .bottom-footer .copyriting {
+    margin-right: 40px;
+  }
+}
+footer .bottom-footer .sitemap, footer .bottom-footer .politics {
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 40px;
+}
+footer .main-phone {
+  font-size: 19px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffffff;
+  padding-left: 30px;
+  margin-bottom: 25px;
+  position: relative;
+}
+footer .main-phone:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/svg/phone white.svg");
+}
+footer .mail, footer .work-time {
+  padding-left: 30px;
+  position: relative;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+footer .mail:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/svg/mail.svg");
+}
+footer .visa {
+  width: 150px;
+  max-width: 100%;
+}
+footer .visa img {
+  width: 100%;
+}
+footer .social-list {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+footer .social-list .social-link {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #ff7a2d;
+  margin-left: 10px;
+  position: relative;
+}
+footer .social-list .social-link:first-of-type {
+  margin-left: 0;
+}
+footer .social-list .social-link:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 40%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+footer .social-list .social-link.vk:after {
+  background-image: url("../images/svg/vk.svg");
+}
+footer .social-list .social-link.inst:after {
+  background-image: url("../images/svg/instagram.svg");
+}
+footer .social-list .social-link.facebook:after {
+  background-image: url("../images/svg/facebook.svg");
+}
+footer .social-list .social-link.youtube:after {
+  background-image: url("../images/svg/youtube.svg");
 }
 
 /*# sourceMappingURL=index.css.map */

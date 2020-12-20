@@ -21,6 +21,9 @@
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: contain;
+    @include breakpoint(sm-down){
+      content: initial;
+    }
   }
 
   @include breakpoint(sm-down){

@@ -1,0 +1,170 @@
+footer{
+  background-color: #89b64e;
+  .top-footer{
+    padding: 25px 0;
+    @include flexbox;
+    @include flex-wrap(wrap);
+    .column{
+      width: 25%;
+      @include flexbox;
+      @include align-items(flex-start);
+      @include flex-direction(column);
+      @include justify-content(space-between);
+      @include breakpoint(sm-down){
+        width: 50%;
+        margin-bottom: 30px;
+      }
+      @include breakpoint(mxs){
+        width: 100%;
+      }
+      .top{
+        @include flexbox;
+        @include align-items(flex-start);
+        @include flex-direction(column);
+      }
+    }
+    .title{
+      font-size: 19px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #ffffff;
+
+    }
+    ul{
+      margin: 0;
+      list-style: none;
+      li{
+        margin-left: 0;
+        padding-left: 15px;
+        position: relative;
+        margin-bottom: 10px;
+        &:before{
+          content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+          color: #ffffff; /* Change the color */
+          font-weight: bold; /* If you want it to be bold */
+          display: inline-block; /* Needed to add space between the bullet and the text */
+          width: 1em; /* Also needed for space (tweak if needed) */
+          margin-left: -1em;
+        }
+        a{
+          text-decoration: none;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+  .bottom-footer{
+    padding: 20px 0;
+    border-top: 1px solid #ffffff;
+    background-image: url("../images/decor.png");
+    .container{
+      @include flexbox;
+      @include breakpoint(mxs){
+        @include flex-direction(column);
+      }
+    }
+    .copyriting{
+      margin-right: 170px;
+      color: #ffffff;
+      @include breakpoint(sm-down){
+        margin-right: 40px;
+      }
+    }
+    .sitemap,.politics{
+      color: #ffffff;
+      text-decoration: none;
+      margin-right: 40px;
+    }
+  }
+  .main-phone{
+    font-size: 19px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+    padding-left: 30px;
+    margin-bottom: 25px;
+    position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      @include transform(translateY(-50%));
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 20px;
+      height: 20px;
+      background-image: url("../images/svg/phone white.svg");
+    }
+  }
+  .mail,.work-time{
+    padding-left: 30px;
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .mail{
+    &:after{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      @include transform(translateY(-50%));
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 20px;
+      height: 20px;
+      background-image: url("../images/svg/mail.svg");
+    }
+  }
+  .visa{
+    width: 150px;
+    max-width: 100%;
+    img{
+      width: 100%;
+    }
+  }
+  .social-list{
+    @include flexbox;
+    @include align-items(center);
+    .social-link{
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background-color: #ff7a2d;
+      margin-left: 10px;
+      position: relative;
+      &:first-of-type{
+        margin-left: 0;
+      }
+      &:after{
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        @include transform(translate(-50%, -50%));
+        width: 40%;
+        height: 40%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      &.vk:after{
+        background-image: url("../images/svg/vk.svg");
+      }
+      &.inst:after{
+        background-image: url("../images/svg/instagram.svg");
+      }
+      &.facebook:after{
+        background-image: url("../images/svg/facebook.svg");
+      }
+      &.youtube:after{
+        background-image: url("../images/svg/youtube.svg");
+      }
+    }
+  }
+}
