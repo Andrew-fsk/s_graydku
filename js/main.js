@@ -132,4 +132,8 @@ $(document).ready(function () {
         ]
     });
 
+    $('.info-all').on('click touchend', function () {
+        $(this).parent().toggleClass('show');
+        return false;
+    })
 })

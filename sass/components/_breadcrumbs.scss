@@ -1,0 +1,34 @@
+.breadcrumbs{
+  @include flexbox;
+  @include breakpoint(sm-down){
+    @include flex-wrap(nowrap);
+    overflow: auto;
+  }
+  margin-bottom: 20px;
+  li{
+    margin: 0;
+    list-style: none;
+    padding-right: 16px;
+    position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      right: 6px;
+      width: 5px;
+      height: 5px;
+      background-color: #a6a6a6;
+      border-radius: 50%;
+      top: calc(50% - 2.5px);
+    }
+    &:last-of-type{
+      &:after{
+        content: initial;
+      }
+    }
+    a{
+      text-decoration: none;
+      color: #a6a6a6;
+      font-size: 14px;
+    }
+  }
+}

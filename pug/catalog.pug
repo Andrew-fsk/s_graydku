@@ -1,0 +1,74 @@
+extends base
+
+block content
+    .top-block
+        .container
+            ul(class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList")
+                li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+                    a(href="./index.html" itemprop="item") Главная
+                li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+                    a(href="./index.html" itemprop="item") Раздел
+            h2 Название раздела
+            .property-list
+                each value, index in Array(6)
+                    label.property
+                        input(type="checkbox")
+                        span.title Пункт #{index}
+    .catalog-wrap
+        .container
+            .info-line
+                .left
+                    .date-list
+                        .current Ассортимент на: все даты
+                        .list
+                            .item Не все даты
+                            .item Не все даты 1
+                            .item Не все даты 2
+                    .count <span>148</span> товаров
+                .right
+                    .sort
+                       .current По популярности
+                        .list
+                            .item По дате
+                            .item По дате 1
+                    .type
+                        .current Тип меню
+                        .list
+                            .item Меню 1
+                            .item Меню 2
+            .catalog-grid
+                each value in Array(12)
+                    .item-preview
+                        a(href="#").item-image.object-fit
+                            img(src="../images/tomato.jpg")
+                            .week-list
+                                each value, index in ['ПН','ВТ','СР','ЧТ','ПТ','СБ','ВС']
+                                    .day(class="day-" + (index + 1))= value
+                        .bottom-info
+                            a(href="#").title Помидоры спелые, сочные
+                            .description от кооператива «Селянин»
+                            .bottom-row
+                                .bottom-left
+                                    .price <span class="count">200</span> <span>тг.</span>/кг
+                                    .rating
+                                        each value, index in Array(5)
+                                            if index + 1 < 4
+                                                img(src='../images/svg/star.svg')
+                                            else
+                                                img(src='../images/svg/no-star.svg')
+                                a(href="#").buy-button
+            .show-more-wrap
+                a(href="#").show-more
+            .info-text
+                .text Lorem ipsum dolor sit amet, consecteturconsectetur consecteturcons ecteturconsectet ecteturconsectet ecteturconsectet ecteturconsectet urconsecte turconsectetur adipisicing elit. Aperiam delectus ex magnam maxime! Consequatur doloribus ea hic nobis sed tempore! Aliquid commodi incidunt minima odit placeat quaerat reiciendis sit, vel?
+                .info-all Show all
+    .mail-form-wrap.last-block
+        .container
+            h2 Подпишитесь на рассылку
+            .mail-text Акции только для подписчиков
+            .mail-form
+                .input-field
+                    input(placeholder="Email")
+                .button
+                    span Отправить
+                    input(type="submit")

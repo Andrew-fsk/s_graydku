@@ -76,24 +76,7 @@
     @include justify-content(center);
     @include flexbox;
 
-    .button {
-      @include justify-content(center);
-      @include flexbox;
-      @include align-items(center);
-      width: 260px;
-      padding: 20px;
-      border-radius: 25px;
-      background-color: #ff7a2d;
 
-      span {
-        color: #ffffff;
-        font-size: 14px;
-      }
-
-      input {
-        display: none;
-      }
-    }
   }
 }
 
@@ -105,5 +88,25 @@
     border-radius: 25px;
     border: 2px solid #e2e4d7;
     padding: 20px 30px;
+  }
+}
+
+.button {
+  cursor: pointer;
+  @include justify-content(center);
+  @include flexbox;
+  @include align-items(center);
+  width: 260px;
+  padding: 24px;
+  border-radius: 25px;
+  background-color: #ff7a2d;
+
+  span {
+    color: #ffffff;
+    font-size: 14px;
+  }
+
+  input {
+    display: none;
   }
 }
