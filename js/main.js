@@ -98,6 +98,17 @@ $(document).ready(function () {
             }
         ]
     });
+
+    $(' .item-slider').slick({
+        dots: false,
+        infinite: false,
+        speed: 500,
+        fade: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        swipeToSlide: true,
+    });
     $('.popular-slider').slick({
         dots: true,
         infinite: false,
@@ -136,4 +147,40 @@ $(document).ready(function () {
         $(this).parent().toggleClass('show');
         return false;
     })
+
+    $(document).on('keydown', '[name^=count], [name^=update]', function(e){
+        -1!==$.inArray(e.keyCode,[17,46,8,9,27,13,110,190])||/65|67|86|88/.test(e.keyCode)&&(!0===e.ctrlKey||!0===e.metaKey)||35<=e.keyCode&&40>=e.keyCode||(e.shiftKey||48>e.keyCode||57<e.keyCode)&&(96>e.keyCode||105<e.keyCode)&&e.preventDefault()
+    });
+
+    $('body').on('click touchend', '.minus', function () {
+        var $input = $(this).parent().find('input');
+        var count = parseInt($input.val()) - 1;
+        count = count < 1 ? 1 : count;
+        $input.val(count);
+        $input.change();
+        return false;
+    });
+    $('body').on('click touchend', '.plus', function () {
+        var $input = $(this).parent().find('input');
+        var count = parseInt($input.val()) + 1;
+        if (max = parseInt($input.attr('max'))) {
+            count = count > max ? max : count;
+        }
+        $input.val(count);
+        $input.change();
+        return false;
+    });
+
+    $(function () {
+        var tabContainers = $('.tabs > div');
+        tabContainers.hide().filter(':first').show();
+        $('.tabs .tab-list a').click(function () {
+            tabContainers.hide();
+            tabContainers.filter(this.hash).show();
+            $('.catalog-slider').slick('setPosition');  //если в Табе используется слайдер
+            $('.tabs .tab-list>li').removeClass('active');
+            $(this).parent('li').addClass('active');
+            return false;
+        }).filter(':first').click();
+    });
 })

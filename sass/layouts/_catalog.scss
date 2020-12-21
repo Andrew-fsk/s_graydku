@@ -17,6 +17,14 @@
   img{
     max-width: 100%;
     max-height: 165px;
+    @include breakpoint(mxs){
+      max-height: 120px;
+    }
+  }
+  @include breakpoint(mxs){
+    .slick-list{
+      padding: 0 30%;
+    }
   }
 }
 
@@ -534,6 +542,9 @@
     font-size: 14px;
     text-align: center;
     margin-bottom: 50px;
+    @include breakpoint(sm-down){
+      margin-bottom: 25px;
+    }
   }
 }
 

@@ -1,0 +1,106 @@
+extends base
+
+block content
+    .item-body
+        .container
+            .item-row
+                .left
+                    h2  Томаты
+                    .rating-info
+                        .rating
+                            each value, index in Array(5)
+                                if index + 1 < 4
+                                    img(src='../images/svg/star.svg')
+                                else
+                                    img(src='../images/svg/no-star.svg')
+                        .rating-count <span>1543</span> отзыва
+                    .farmer-info
+                        .farmer-image.object-fit
+                            img(src="../images/farmer.jpg")
+                        .farmer-column
+                            .name Имя фамилия
+                            .text описание фермера
+                    .text-item Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias beatae cum deleniti doloremque ducimus ea iure laborum maiores molestiae, nobis obcaecati perferendis, quibusdam quo reiciendis reprehenderit sapiente tempora tenetur, voluptatum?
+                    .consist <span>Состав</span> помидоры, состав продукта
+                    .buy-line
+                        .price
+                            <span class="title">Цена</span> <span class="main-price">65</span><span class="title">тг.</span>/<span class="weight">560</span>г.
+                        .count-field
+                            .minus -
+                            input(name="count" type="text" value='1')
+                            .plus +
+                        .buy-button
+                            span В корзину
+                            input(type="submit")
+
+                .right
+                    .item-slider
+                        each value in Array(3)
+                            .slide.object-fit
+                                img(src="../images/tomato.jpg")
+            .tabs.item-tabs
+                ul.tab-list
+                    each val, index in ['Описание', 'Сертификаты', 'Отзывов (234)']
+                        li.tab-item
+                            a(href=`#tab-${index}`).tab-link= val
+                each val, index in ['Описание', 'Сертификаты', 'Отзывов (234)']
+                    div(id=`tab-${index}`).tab
+                        .description-tab
+                            .left
+                                .weight Масса <span class="value">300</span> гр
+                                .pabular-list
+                                    .line
+                                        .value Белок 8.5 г
+                                        .key 100гр
+                                        .value-line(style='width:8.5%')
+                                    .line
+                                        .value Жиры 10 г
+                                        .key 100гр
+                                        .value-line(style='width:10%')
+                                    .line
+                                        .value Белок 90 г
+                                        .key 100гр
+                                        .value-line(style='width:90%')
+                                .spec
+                                    .title Срок
+                                    .value 3 month
+                                .spec
+                                    .title Срок
+                                    .value 3 month
+
+    .right
+
+    .same-items-wrap
+        .container
+            h2 Похожие товары
+            .same-list
+                each value in Array(4)
+                    .item-preview
+                        a(href="#").item-image.object-fit
+                            img(src="../images/tomato.jpg")
+                            .week-list
+                                each value, index in ['ПН','ВТ','СР','ЧТ','ПТ','СБ','ВС']
+                                    .day(class="day-" + (index + 1))= value
+                        .bottom-info
+                            a(href="#").title Помидоры спелые, сочные
+                            .description от кооператива «Селянин»
+                            .bottom-row
+                                .bottom-left
+                                    .price <span class="count">200</span> <span>тг.</span>/кг
+                                    .rating
+                                        each value, index in Array(5)
+                                            if index + 1 < 4
+                                                img(src='../images/svg/star.svg')
+                                            else
+                                                img(src='../images/svg/no-star.svg')
+                                a(href="#").buy-button
+    .mail-form-wrap.last-block
+        .container
+            h2 Подпишитесь на рассылку
+            .mail-text Акции только для подписчиков
+            .mail-form
+                .input-field
+                    input(placeholder="Email")
+                .button
+                    span Отправить
+                    input(type="submit")
