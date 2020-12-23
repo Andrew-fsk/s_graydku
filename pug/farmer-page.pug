@@ -1,0 +1,69 @@
+extends base
+
+block content
+    .farmer-body-wrap
+        .container
+            ul(class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList")
+                li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+                    a(href="./index.html" itemprop="item") Главная
+                li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+                    a(href="./index.html" itemprop="item") Раздел
+                li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+                    a(href="./index.html" itemprop="item") Раздел
+        .container
+            .farmer-body
+                .left
+                    h2  Farmer name
+                    .rating-info
+                        .rating
+                            each value, index in Array(5)
+                                if index + 1 < 4
+                                    img(src='../images/svg/star.svg')
+                                else
+                                    img(src='../images/svg/no-star.svg')
+                        .rating-count <span>1543</span> отзыва
+                    .farmer-body-text Lorem ipsum dolor sit amet, consectetur adipisicin nsectetur adipisicing elit. Au nsectetur adipisicing elit. Au nsectetur adipisicing elit. Au nsectetur adipisicing elit. Au nsectetur adipisicing elit. Au nsectetur adipisicing elit. Aunsectetur adipisicing elit. Au g elit. Autem culpa cumque dignissimos earum eius eos, et impedit quia sequi suscipit. Atque, dolor error eum explicabo fuga hic neque quaerat sunt.
+                .right
+                    .farmer-image.object-fit
+                        img(src='../images/farmer.jpg')
+    .farmer-tabs-wrap
+        .container
+            .tabs.farmer-tabs
+                ul.tab-list
+                    each val, index in ['Продукция', 'Сертификаты']
+                        li.tab-item
+                            a(href=`#tab-${index}`).tab-link= val
+                each val, index in ['Продукция', 'Сертификаты']
+                    div(id=`tab-${index}`).tab
+                        .catalog-grid
+                            each value in Array(11)
+                                .item-preview
+                                    a(href="#").item-image.object-fit
+                                        img(src="../images/tomato.jpg")
+                                        .week-list
+                                            each value, index in ['ПН','ВТ','СР','ЧТ','ПТ','СБ','ВС']
+                                                .day(class="day-" + (index + 1))= value
+                                    .bottom-info
+                                        a(href="#").title Помидоры спелые, сочные
+                                        .description от кооператива «Селянин»
+                                        .bottom-row
+                                            .bottom-left
+                                                .price <span class="count">200</span> <span>тг.</span>/кг
+                                                .rating
+                                                    each value, index in Array(5)
+                                                        if index + 1 < 4
+                                                            img(src='../images/svg/star.svg')
+                                                        else
+                                                            img(src='../images/svg/no-star.svg')
+                                            a(href="#").buy-button
+    .mail-form-wrap.last-block
+        .container
+            h2 Подпишитесь на рассылку
+            .mail-text Акции только для подписчиков
+            .mail-form
+                .input-field
+                    input(placeholder="Email")
+                .button
+                    span Отправить
+                    input(type="submit")
+

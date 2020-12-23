@@ -38,27 +38,9 @@
       margin-bottom: 20px;
     }
   }
-  .rating{
-    @include flexbox;
-    img{
-      max-width: 25px;
-      margin-right: 5px;
-    }
-  }
 
-  .rating-info{
-    @include flexbox;
-    @include align-items(center);
-    margin-bottom: 25px;
-  }
-  .rating-count{
-    font-size: 14px;
-    color: #858585;
-    span{
-      color: $text-color;
-      font-size: 16px;
-    }
-  }
+
+
   .farmer-info{
     @include flexbox;
     @include align-items(center);
@@ -228,7 +210,7 @@
   }
 }
 
-.item-tabs{
+.item-tabs,.farmer-tabs{
   .tab-list{
     @include flexbox;
     @include flex-wrap(wrap);
@@ -240,10 +222,12 @@
   }
   .tab-item{
     list-style: none;
-    margin: 0 5px 10px 0;
-    padding: 12px 20px;
+    margin: 0 5px 0 0;
     border-radius: 25px;
     border: 1px solid #e2e4d7;
+    @include breakpoint(sm-down){
+      margin: 0 5px 10px 0;
+    }
     &.active{
       border-color: #ff7a2d;
       .tab-link{
@@ -255,6 +239,8 @@
     text-decoration: none;
     color: #858585;
     font-size: 14px;
+    padding: 12px 20px;
+    display: inline-block;
   }
 }
 
@@ -375,5 +361,27 @@
   .farmer-bottom{
     @include flexbox;
     @include justify-content(flex-end);
+  }
+}
+
+.rating-info{
+  @include flexbox;
+  @include align-items(center);
+  margin-bottom: 25px;
+}
+.rating-count{
+  font-size: 14px;
+  color: #858585;
+  span{
+    color: $text-color;
+    font-size: 16px;
+  }
+}
+
+.rating{
+  @include flexbox;
+  img{
+    max-width: 25px;
+    margin-right: 5px;
   }
 }
