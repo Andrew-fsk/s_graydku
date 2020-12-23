@@ -1,0 +1,42 @@
+extends base
+
+block content
+    .bascet-wrap
+        .container
+            h2 Корзина
+            .basket
+                .item-list
+                    each value in Array(2)
+                        .bascket-item
+                            a(href="#").item-image.object-fit
+                                img(src="../images/tomato.jpg")
+                            .item-info
+                                a(href='#').item-title Название товара
+                                .
+
+    .popular-slider-wrap.special.last-block
+        .container
+            h2 Специальные предложения
+            .popular-slider.slider
+                each value in Array(10)
+                    .slide
+                        .item-preview
+                            a(href="#").item-image.object-fit
+                                img(src="../images/tomato.jpg")
+                                .week-list
+                                    each value, index in ['ПН','ВТ','СР','ЧТ','ПТ','СБ','ВС']
+                                        .day(class="day-" + (index + 1))= value
+                            .bottom-info
+                                a(href="#").title Помидоры спелые, сочные
+                                .description от кооператива «Селянин»
+                                .bottom-row
+                                    .bottom-left
+                                        .old-price 1200 тг.
+                                        .price <span class="count">200</span> <span>тг.</span>/кг
+                                        .rating
+                                            each value, index in Array(5)
+                                                if index + 1 < 4
+                                                    img(src='../images/svg/star.svg')
+                                                else
+                                                    img(src='../images/svg/no-star.svg')
+                                    a(href="#").buy-button

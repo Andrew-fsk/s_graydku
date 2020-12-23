@@ -38,13 +38,13 @@ block content
                         each value in Array(3)
                             .slide.object-fit
                                 img(src="../images/tomato.jpg")
-                .tabs.item-tabs
-                    ul.tab-list
-                        each val, index in ['Описание', 'Сертификаты', 'Отзывов (234)']
-                            li.tab-item
-                                a(href=`#tab-${index}`).tab-link= val
+            .tabs.item-tabs
+                ul.tab-list
                     each val, index in ['Описание', 'Сертификаты', 'Отзывов (234)']
-                        div(id=`tab-${index}`).tab
+                        li.tab-item
+                            a(href=`#tab-${index}`).tab-link= val
+                each val, index in ['Описание', 'Сертификаты', 'Отзывов (234)']
+                    div(id=`tab-${index}`).tab
                         .description-tab
                             .left
                                 .weight Масса <span class="value">300</span> гр
@@ -79,6 +79,7 @@ block content
                                     a(href="#").buy-button
                                         span Подробнее
 
+    .right
 
     .same-items-wrap
         .container
