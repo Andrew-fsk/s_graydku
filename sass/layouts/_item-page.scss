@@ -231,12 +231,16 @@
 .item-tabs{
   .tab-list{
     @include flexbox;
+    @include flex-wrap(wrap);
     margin: 0;
     padding: 30px 0;
+    @include breakpoint(sm-down){
+      padding: 10px 0;
+    }
   }
   .tab-item{
     list-style: none;
-    margin: 0 5px 0 0;
+    margin: 0 5px 10px 0;
     padding: 12px 20px;
     border-radius: 25px;
     border: 1px solid #e2e4d7;
@@ -257,12 +261,29 @@
 .description-tab{
   @include flexbox;
   border-radius: 25px;
+  overflow: hidden;
   border: 1px solid #e2e4d7;
+  @include flex-wrap(wrap);
   .left,.right{
     width: 50%;
+    @include breakpoint(sm-down){
+      width: 100%;
+    }
   }
   .left{
     padding: 40px 20px;
+    .spec{
+      font-size: 17px;
+      &:nth-child(5){
+      margin: 30px 0;
+        @include breakpoint(sm-down){
+          margin: 0;
+        }
+      }
+      span{
+        font-weight: bold;
+      }
+    }
     .weight{
       font-size: 17px;
       font-weight: bold;
@@ -296,5 +317,63 @@
         }
       }
     }
+  }
+  .right{
+    padding: 45px 30px;
+    background-color: #ebecee;
+    .name{
+      font-size: 19px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      padding-left: 15px;
+    }
+    .farmer-row{
+      @include flexbox;
+      @include align-items(flex-end);
+      margin-bottom: 80px;
+      @include breakpoint(md-down){
+        margin-bottom: 0;
+        @include align-items(flex-start);
+        @include flex-direction(column);
+      }
+    }
+    .image{
+      height: 265px;
+      min-width: 265px;
+      border-radius: 25px;
+      overflow: hidden;
+      position: relative;
+      @include breakpoint(md-down){
+        margin-bottom: 20px;
+        min-width: 100%;
+      }
+    }
+    .farmer-text{
+      padding-left: 30px;
+      @include breakpoint(md-down){
+        padding-left: 0;
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .buy-button{
+    border-radius: 40px;
+    background-color: #ff7a2d;
+    cursor: pointer;
+    width: 185px;
+    text-decoration: none;
+    height: 54px;
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(center);
+    color: #ffffff;
+    input{
+      display: none;
+    }
+
+  }
+  .farmer-bottom{
+    @include flexbox;
+    @include justify-content(flex-end);
   }
 }

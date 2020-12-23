@@ -2668,12 +2668,26 @@ header .cart-preview .title {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   margin: 0;
   padding: 30px 0;
 }
+@media (max-width: 1024px) {
+  .item-tabs .tab-list {
+    padding: 10px 0;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .item-tabs .tab-list {
+    padding: 10px 0;
+  }
+}
 .item-tabs .tab-item {
   list-style: none;
-  margin: 0 5px 0 0;
+  margin: 0 5px 10px 0;
   padding: 12px 20px;
   border-radius: 25px;
   border: 1px solid #e2e4d7;
@@ -2697,13 +2711,47 @@ header .cart-preview .title {
   display: -webkit-flex;
   display: flex;
   border-radius: 25px;
+  overflow: hidden;
   border: 1px solid #e2e4d7;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .description-tab .left, .description-tab .right {
   width: 50%;
 }
+@media (max-width: 1024px) {
+  .description-tab .left, .description-tab .right {
+    width: 100%;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .description-tab .left, .description-tab .right {
+    width: 100%;
+  }
+}
 .description-tab .left {
   padding: 40px 20px;
+}
+.description-tab .left .spec {
+  font-size: 17px;
+}
+.description-tab .left .spec:nth-child(5) {
+  margin: 30px 0;
+}
+@media (max-width: 1024px) {
+  .description-tab .left .spec:nth-child(5) {
+    margin: 0;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .description-tab .left .spec:nth-child(5) {
+    margin: 0;
+  }
+}
+.description-tab .left .spec span {
+  font-weight: bold;
 }
 .description-tab .left .weight {
   font-size: 17px;
@@ -2748,6 +2796,101 @@ header .cart-preview .title {
   height: 10px;
   background-color: #ff7a2d;
   z-index: 1;
+}
+.description-tab .right {
+  padding: 45px 30px;
+  background-color: #ebecee;
+}
+.description-tab .right .name {
+  font-size: 19px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  padding-left: 15px;
+}
+.description-tab .right .farmer-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: flex-end;
+  -moz-align-items: flex-end;
+  -ms-align-items: flex-end;
+  align-items: flex-end;
+  margin-bottom: 80px;
+}
+@media (max-width: 1199px) {
+  .description-tab .right .farmer-row {
+    margin-bottom: 0;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
+    align-items: flex-start;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+.description-tab .right .image {
+  height: 265px;
+  min-width: 265px;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+}
+@media (max-width: 1199px) {
+  .description-tab .right .image {
+    margin-bottom: 20px;
+    min-width: 100%;
+  }
+}
+.description-tab .right .farmer-text {
+  padding-left: 30px;
+}
+@media (max-width: 1199px) {
+  .description-tab .right .farmer-text {
+    padding-left: 0;
+    margin-bottom: 30px;
+  }
+}
+.description-tab .buy-button {
+  border-radius: 40px;
+  background-color: #ff7a2d;
+  cursor: pointer;
+  width: 185px;
+  text-decoration: none;
+  height: 54px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  color: #ffffff;
+}
+.description-tab .buy-button input {
+  display: none;
+}
+.description-tab .farmer-bottom {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  justify-content: flex-end;
+  -ms-flex-pack: flex-end;
 }
 
 footer {
