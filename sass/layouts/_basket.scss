@@ -1,0 +1,217 @@
+.basket{
+  @include flexbox;
+  @include align-items(flex-start);
+}
+
+.bascet-wrap{
+  h3{
+    text-align: left;
+    @include user-select(none);
+  }
+  padding: 40px 0;
+  @include breakpoint(sm-down){
+    padding: 25px 0;
+  }
+  h2{
+    text-align: left;
+    margin-bottom: 30px;
+    @include breakpoint(sm-down){
+      margin-bottom: 20px;
+    }
+  }
+  .item-list{
+    width: 75%;
+    padding-right: 30px;
+  }
+  .basket-info{
+    width: 25%;
+    border: 1px solid #e2e4d7;
+  }
+  .delivery-time{
+    background-color: #ebecee;
+    padding: 25px 40px 65px 40px;
+    .title{
+      color: #858585;
+      font-size: 14px;
+      position: relative;
+      padding-left: 40px;
+      margin-bottom: 5px;
+      &:after{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: calc(50% - 8px);
+        width: 16px;
+        height: 16px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url("../images/svg/clock.svg");
+      }
+    }
+    .date{
+      padding-left: 40px;
+      @include flexbox;
+      @include align-items(center);
+      font-size: 19px;
+      .day{
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+.basket-total{
+  padding: 30px 20px;
+  .line{
+    @include flexbox;
+    @include justify-content(space-between);
+    @include align-items(flex-end);
+    margin-bottom: 25px;
+    .key{
+      color: #858585;
+    }
+    .value{
+      font-weight: bold;
+    }
+  }
+  .buy-button{
+    cursor: pointer;
+    padding: 20px 29px;
+    border-radius: 60px;
+    background-color: #ff7a2d;
+    @include flexbox;
+    @include justify-content(center);
+    margin: auto;
+    margin-bottom: 40px;
+    width: 185px;
+    input{
+      display: none;
+    }
+    span{
+      color: #ffffff;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .clear-basket{
+    color: #858585;
+    cursor: pointer;
+    position: relative;
+    padding-left: 40px;
+    &:after{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: calc(50% - 8px);
+      width: 16px;
+      height: 16px;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url("../images/svg/delete.svg");
+    }
+  }
+}
+
+.bascket-item{
+  @include flexbox;
+  border-bottom: 1px solid #e2e4d7;
+  &:first-of-type{
+    border-top: 1px solid #e2e4d7 ;
+  }
+
+  padding: 30px 0;
+  .item-image{
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    width: 100px;
+    height: auto;
+    margin-right: 30px;
+  }
+  .week-list{
+    @include flexbox;
+  }
+  .item-title{
+    text-decoration: none;
+    font-size: 19px;
+    color:$text-color;
+    margin-bottom: 4px;
+  }
+  .main-price{
+    color: #ff7a2d;
+    font-weight: bold;
+    font-size: 19px;
+  }
+  .price{
+    font-size: 14px;
+    margin-bottom: 15px;
+    .title{
+      font-weight: bold;
+      font-size: 19px;
+    }
+  }
+  .item-info{
+    width: 40%;
+    padding-right: 30px;
+  }
+  .count-field{
+    @include flexbox;
+    @include align-items(center);
+    border: 1px solid #e2e4d7;
+    margin-right: 10px;
+    height: 52px;
+    border-radius: 25px;
+    padding: 0 5px;
+    @include breakpoint(mxs){
+      margin-bottom: 10px;
+    }
+    .plus,.minus{
+      @include user-select(none);
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 24px;
+      width: 30px;
+      text-align: center;
+      color: #e2e4d7;
+    }
+    input{
+      width: 45px;
+      height: 50px;
+      border: none;
+      text-align: center;
+      padding: 4px;
+    }
+  }
+  .basket-column{
+    @include flexbox;
+    @include align-items(center);
+  }
+  .total-price{
+    font-weight: bold;
+    font-size: 19px;
+    span{
+      color: #ff7a2d;
+    }
+  }
+  .price-column{
+    width: 15%;
+    @include flexbox;
+    @include justify-content(flex-end);
+  }
+  .delete-item{
+    width: 16px;
+    cursor: pointer;
+    height: 16px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../images/svg/delete.svg");
+  }
+  .delete-column{
+    margin-left: auto;
+    margin-right: 20px;
+  }
+}

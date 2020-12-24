@@ -22,51 +22,7 @@
     bottom: 5px;
     left: 10px;
 
-    .day {
-      width: 25px;
-      height: 25px;
-      border-radius: 50%;
-      color: #ffffff;
-      font-size: 10px;
-      @include flexbox;
-      @include align-items(center);
-      @include justify-content(center);
-      margin: 0 2px;
-    }
 
-    .day-1 {
-      background-color: #f47691;
-
-    }
-
-    .day-2 {
-      background-color: #ec8c53;
-
-    }
-
-    .day-3 {
-      background-color: #f1c54b;
-
-    }
-
-    .day-4 {
-      background-color: #85a848;
-
-    }
-
-    .day-5 {
-      background-color: #85b4e5;
-
-    }
-
-    .day-6 {
-      background-color: #297ac9;
-
-    }
-
-    .day-7 {
-      background-color: #ba55e5;
-    }
   }
 
   .title {
@@ -144,4 +100,50 @@
       background-image: url("../images/old price.png");
     }
   }
+}
+
+.day {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 10px;
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(center);
+  margin: 0 2px;
+}
+
+.day-1 {
+  background-color: #f47691;
+
+}
+
+.day-2 {
+  background-color: #ec8c53;
+
+}
+
+.day-3 {
+  background-color: #f1c54b;
+
+}
+
+.day-4 {
+  background-color: #85a848;
+
+}
+
+.day-5 {
+  background-color: #85b4e5;
+
+}
+
+.day-6 {
+  background-color: #297ac9;
+
+}
+
+.day-7 {
+  background-color: #ba55e5;
 }

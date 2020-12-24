@@ -12,8 +12,41 @@ block content
                                 img(src="../images/tomato.jpg")
                             .item-info
                                 a(href='#').item-title Название товара
-                                .
-
+                                .price
+                                    <span class="main-price">65</span><span class="title">тг.</span>/<span class="weight">560</span>г.
+                                .week-list
+                                    each value, index in ['ПН','ВТ','СР','ЧТ','ПТ','СБ','ВС']
+                                        .day(class="day-" + (index + 1))= value
+                            .basket-column
+                                .count-field
+                                    .minus -
+                                    input(name="count" type="text" value='1')
+                                    .plus +
+                            .basket-column.price-column
+                                .total-price <span id="total">3 600</span> тг.
+                            .basket-column.delete-column
+                                .delete-item
+                    h3.hidden Корзина пуста
+                .basket-info
+                    .delivery-time
+                        .title Ближайшая доставка
+                        .date 8 декабря
+                            .day.day-4 ЧТ
+                    .basket-total
+                        .line
+                            .key Кол-во товаров
+                            .value(id="total-count") 3
+                        .line
+                            .key Вес
+                            .value(id="total-mass") <span>12.6</span> кг.
+                        .line
+                            .key Цена
+                            .value(id="total-price") <span>9110</span> тг.
+                        .buy-button
+                            span Оформить заказ
+                            input(type="submit")
+                        .ac-jc
+                            .clear-basket Очистить корзину
     .popular-slider-wrap.special.last-block
         .container
             h2 Специальные предложения

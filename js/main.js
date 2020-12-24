@@ -183,4 +183,17 @@ $(document).ready(function () {
             return false;
         }).filter(':first').click();
     });
+
+    $(document).on('click touchend', '.clear-basket', function () {
+        $('.item-list .bascket-item').remove();
+        $('.item-list h3').removeClass('hidden');
+        return false;
+    })
+    $(document).on('click touchend', '.bascket-item .delete-item', function () {
+        $(this).closest('.bascket-item').remove();
+        if( $('.item-list .bascket-item').length === 0){
+            $('.item-list h3').removeClass('hidden');
+        }
+        return false;
+    })
 })
