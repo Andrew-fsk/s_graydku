@@ -1,6 +1,9 @@
 .basket{
   @include flexbox;
   @include align-items(flex-start);
+  @include breakpoint(sm-down){
+    @include flex-direction(column);
+  }
 }
 
 .bascet-wrap{
@@ -22,14 +25,24 @@
   .item-list{
     width: 75%;
     padding-right: 30px;
+    @include breakpoint(sm-down){
+      width: 100%;
+      padding-right: 0;
+    }
   }
   .basket-info{
     width: 25%;
     border: 1px solid #e2e4d7;
+    @include breakpoint(sm-down){
+      width: 100%;
+    }
   }
   .delivery-time{
     background-color: #ebecee;
     padding: 25px 40px 65px 40px;
+    @include breakpoint(md-down){
+      padding: 15px;
+    }
     .title{
       color: #858585;
       font-size: 14px;
@@ -118,6 +131,12 @@
 .bascket-item{
   @include flexbox;
   border-bottom: 1px solid #e2e4d7;
+  @include breakpoint(xs){
+    position: relative;
+    @include flex-direction(column);
+    @include align-items(center);
+    padding: 15px 0;
+  }
   &:first-of-type{
     border-top: 1px solid #e2e4d7 ;
   }
@@ -130,6 +149,12 @@
     width: 100px;
     height: auto;
     margin-right: 30px;
+    @include breakpoint(xs){
+      width: 200px;
+      height: 200px;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
   }
   .week-list{
     @include flexbox;
@@ -156,6 +181,14 @@
   .item-info{
     width: 40%;
     padding-right: 30px;
+    @include breakpoint(xs){
+      width: 100%;
+      padding-right: 0;
+      margin-bottom: 10px;
+      @include flexbox;
+      @include flex-direction(column);
+      @include align-items(center);
+    }
   }
   .count-field{
     @include flexbox;
@@ -165,7 +198,8 @@
     height: 52px;
     border-radius: 25px;
     padding: 0 5px;
-    @include breakpoint(mxs){
+    @include breakpoint(xs){
+      margin-right: 0;
       margin-bottom: 10px;
     }
     .plus,.minus{
@@ -200,6 +234,10 @@
     width: 15%;
     @include flexbox;
     @include justify-content(flex-end);
+    @include breakpoint(xs){
+      width: 100%;
+      @include justify-content(center);
+    }
   }
   .delete-item{
     width: 16px;
@@ -209,9 +247,34 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url("../images/svg/delete.svg");
+    @include breakpoint(xs){
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 1;
+    }
   }
   .delete-column{
     margin-left: auto;
     margin-right: 20px;
+  }
+}
+
+.special-text{
+  color: #858585;
+  font-size: 15px;
+  margin-bottom: 50px;
+  text-align: center;
+  @include breakpoint(sm-down){
+    margin-bottom: 20px;
+  }
+}
+
+.basket-last{
+  .slick-dots{
+    display: none !important;
+  }
+  h2{
+    margin-bottom: 20px;
   }
 }

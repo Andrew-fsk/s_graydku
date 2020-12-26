@@ -6,7 +6,7 @@ block content
             h2 Корзина
             .basket
                 .item-list
-                    each value in Array(2)
+                    each value in Array(3)
                         .bascket-item
                             a(href="#").item-image.object-fit
                                 img(src="../images/tomato.jpg")
@@ -47,9 +47,10 @@ block content
                             input(type="submit")
                         .ac-jc
                             .clear-basket Очистить корзину
-    .popular-slider-wrap.special.last-block
+    .popular-slider-wrap.special.last-block.basket-last
         .container
             h2 Специальные предложения
+            .special-text Lorem ipsum dolor sit amet, consectetur adipisicing elit
             .popular-slider.slider
                 each value in Array(10)
                     .slide

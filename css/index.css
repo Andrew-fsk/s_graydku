@@ -3074,6 +3074,22 @@ header .cart-preview .title {
   -ms-align-items: flex-start;
   align-items: flex-start;
 }
+@media (max-width: 1024px) {
+  .basket {
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .basket {
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
 
 .bascet-wrap {
   padding: 40px 0;
@@ -3114,13 +3130,40 @@ header .cart-preview .title {
   width: 75%;
   padding-right: 30px;
 }
+@media (max-width: 1024px) {
+  .bascet-wrap .item-list {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .bascet-wrap .item-list {
+    width: 100%;
+    padding-right: 0;
+  }
+}
 .bascet-wrap .basket-info {
   width: 25%;
   border: 1px solid #e2e4d7;
 }
+@media (max-width: 1024px) {
+  .bascet-wrap .basket-info {
+    width: 100%;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .bascet-wrap .basket-info {
+    width: 100%;
+  }
+}
 .bascet-wrap .delivery-time {
   background-color: #ebecee;
   padding: 25px 40px 65px 40px;
+}
+@media (max-width: 1199px) {
+  .bascet-wrap .delivery-time {
+    padding: 15px;
+  }
 }
 .bascet-wrap .delivery-time .title {
   color: #858585;
@@ -3239,6 +3282,20 @@ header .cart-preview .title {
   border-bottom: 1px solid #e2e4d7;
   padding: 30px 0;
 }
+@media (max-width: 767px) {
+  .bascket-item {
+    position: relative;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    padding: 15px 0;
+  }
+}
 .bascket-item:first-of-type {
   border-top: 1px solid #e2e4d7;
 }
@@ -3249,6 +3306,14 @@ header .cart-preview .title {
   width: 100px;
   height: auto;
   margin-right: 30px;
+}
+@media (max-width: 767px) {
+  .bascket-item .item-image {
+    width: 200px;
+    height: 200px;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }
 .bascket-item .week-list {
   display: -webkit-box;
@@ -3280,6 +3345,26 @@ header .cart-preview .title {
   width: 40%;
   padding-right: 30px;
 }
+@media (max-width: 767px) {
+  .bascket-item .item-info {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+  }
+}
 .bascket-item .count-field {
   display: -webkit-box;
   display: -moz-box;
@@ -3296,8 +3381,9 @@ header .cart-preview .title {
   border-radius: 25px;
   padding: 0 5px;
 }
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .bascket-item .count-field {
+    margin-right: 0;
     margin-bottom: 10px;
   }
 }
@@ -3352,6 +3438,16 @@ header .cart-preview .title {
   justify-content: flex-end;
   -ms-flex-pack: flex-end;
 }
+@media (max-width: 767px) {
+  .bascket-item .price-column {
+    width: 100%;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+  }
+}
 .bascket-item .delete-item {
   width: 16px;
   cursor: pointer;
@@ -3361,9 +3457,41 @@ header .cart-preview .title {
   background-repeat: no-repeat;
   background-image: url("../images/svg/delete.svg");
 }
+@media (max-width: 767px) {
+  .bascket-item .delete-item {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 1;
+  }
+}
 .bascket-item .delete-column {
   margin-left: auto;
   margin-right: 20px;
+}
+
+.special-text {
+  color: #858585;
+  font-size: 15px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  .special-text {
+    margin-bottom: 20px;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .special-text {
+    margin-bottom: 20px;
+  }
+}
+
+.basket-last .slick-dots {
+  display: none !important;
+}
+.basket-last h2 {
+  margin-bottom: 20px;
 }
 
 footer {
