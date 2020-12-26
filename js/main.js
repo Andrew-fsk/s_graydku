@@ -177,7 +177,7 @@ $(document).ready(function () {
         $('.tabs .tab-list a').click(function () {
             tabContainers.hide();
             tabContainers.filter(this.hash).show();
-            $('.catalog-slider').slick('setPosition');  //если в Табе используется слайдер
+            $('.catalog-slider').slick('setPosition');
             $('.tabs .tab-list>li').removeClass('active');
             $(this).parent('li').addClass('active');
             return false;
@@ -194,6 +194,14 @@ $(document).ready(function () {
         if( $('.item-list .bascket-item').length === 0){
             $('.item-list h3').removeClass('hidden');
         }
+        return false;
+    })
+    $(document).on('click touchend', '.close-list', function () {
+        $(this).parent().slideUp(400);
+        return false;
+    })
+    $(document).on('click touchend', '.order-item', function () {
+        $(this).find('.order-items-wrap').slideDown(400);
         return false;
     })
 })

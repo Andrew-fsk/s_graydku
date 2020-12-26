@@ -1,3 +1,114 @@
 extends base
 
 block content
+    .container.last-block
+        .user-wrap
+            .title-wrap.mob
+                h2 Личный кабинет
+                .special-text Здравствуйте, <span class='name'>Борис Спиваков</span>, добро пожаловать в Ваш личный кабинет.
+            .user-sidebar
+                .user-image.object-fit
+                    img(src='../images/farmer.jpg')
+                .user-group
+                    .user-name Борис Спиваков
+                    .phone-wrap тел: <span>+7 705 *** 09 55</span>
+                    a(href='mailto:spivalovkz@mail.ru').mail spivalovkz@mail.ru
+                .user-group
+                    a(href='#').active Мои заказы
+                    a(href='../templates/basket.html') Корзина
+                .user-group
+                    a(href='#') Изменить личные данные
+                    a(href='#') Изменить пароль
+                .user-group
+                    a(href='#') Настройки
+            .user-right
+                .title-wrap
+                    h2 Личный кабинет
+                    .special-text Здравствуйте, <span class='name'>Борис Спиваков</span>, добро пожаловать в Ваш личный кабинет.
+                .user-order-title Мои заказы
+                .order-list
+                    .order-top
+                        .status.title Статус
+                        .number.title Номер
+                        .total.title Сумма
+                        .date.title Дата
+                        .order-rating.title Рейтинг
+                    each value, index in Array(3)
+                        if index === 0
+                            .order-item.open
+                                .order-item-top
+                                    .status.send
+                                            .status-text Отправлен
+                                    .number
+                                        a(href='#') 23241
+                                    .total 45 000 тг.
+                                    .date 23.12.2020
+                                    .order-rating
+                                        .rating-icon
+                                .order-items-wrap
+                                    .close-list
+                                    .order-items
+                                        each value in Array(3)
+                                            .bascket-item
+                                                a(href="../templates/item-page.html").item-image.object-fit
+                                                    img(src="../images/tomato.jpg")
+                                                .item-info
+                                                    a(href='../templates/item-page.html').item-title Название товара
+                                                    .price
+                                                        <span class="main-price">65</span><span class="title">тг.</span>/<span class="weight">560</span>г.
+                                                .basket-column
+                                                    .item-count <span>3</span> шт.
+                                                .basket-column.order-price
+                                                    .total-price <span id="total">3 600</span> тг.
+                        else if index === 1
+                            .order-item
+                                .order-item-top
+                                    .status.pending
+                                        .status-text В обработке
+                                    .number
+                                        a(href='#') 23241
+                                    .total 21 233 тг.
+                                    .date 14.12.2020
+                                    .order-rating
+                                        .rating-icon
+                                .order-items-wrap
+                                    .close-list
+                                    .order-items
+                                        each value in Array(3)
+                                            .bascket-item
+                                                a(href="../templates/item-page.html").item-image.object-fit
+                                                    img(src="../images/tomato.jpg")
+                                                .item-info
+                                                    a(href='../templates/item-page.html').item-title Название товара
+                                                    .price
+                                                        <span class="main-price">65</span><span class="title">тг.</span>/<span class="weight">560</span>г.
+                                                .basket-column
+                                                    .item-count <span>3</span> шт.
+                                                .basket-column.order-price
+                                                    .total-price <span id="total">3 600</span> тг.
+                        else
+                            .order-item
+                                .order-item-top
+                                    .status.done
+                                        .status-text Выполнен
+                                    .number
+                                        a(href='#') 23241
+                                    .total 11 233 тг.
+                                    .date 04.12.2020
+                                    .order-rating
+                                        .rating-icon
+                                .order-items-wrap
+                                    .close-list
+                                    .order-items
+                                        each value in Array(3)
+                                            .bascket-item
+                                                a(href="../templates/item-page.html").item-image.object-fit
+                                                    img(src="../images/tomato.jpg")
+                                                .item-info
+                                                    a(href='../templates/item-page.html').item-title Название товара
+                                                    .price
+                                                        <span class="main-price">65</span><span class="title">тг.</span>/<span class="weight">560</span>г.
+                                                .basket-column
+                                                    .item-count <span>3</span> шт.
+                                                .basket-column.order-price
+                                                    .total-price <span id="total">3 600</span> тг.
