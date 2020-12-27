@@ -204,4 +204,13 @@ $(document).ready(function () {
         $(this).find('.order-items-wrap').slideDown(400);
         return false;
     })
+    $('.provider-list .existence input').on('change', function () {
+        if(!$(this).prop('checked')){
+            $(this).closest('.item').addClass('no-exist');
+        }else{
+            $(this).closest('.item').removeClass('no-exist');
+        }
+
+        return false;
+    })
 })

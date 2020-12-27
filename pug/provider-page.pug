@@ -11,7 +11,18 @@ block content
                     img(src='../images/farmer.jpg')
                 .user-group
                     .user-name Борис Спиваков
+                    .rating-info
+                        .rating
+                            each value, index in Array(5)
+                                if index + 1 < 4
+                                    img(src='../images/svg/star.svg')
+                                else
+                                    img(src='../images/svg/no-star.svg')
+                        .rating-count <span>1543</span> отзыва
                 .user-group
+                    .items-title Мои товары
+                    .item-title Овощи (22)
+                    .item-title Фрукты (24)
                     a(href='#') Заказы
                     a(href='#') Мои заказы
                 .user-group
@@ -23,3 +34,31 @@ block content
                 .title-wrap
                     h2 Личный кабинет
                     .special-text Здравствуйте, <span class='name'>Борис Спиваков</span>, добро пожаловать в Ваш личный кабинет.
+                .user-order-title Мои товары
+                .order-list
+                    .order-top
+                        .title.existence Наличие
+                        .title.name Название товара
+                        .title.price Цена
+                        .title.count доступное кол-во
+                        .title.statistic статистика
+                    .provider-list
+                        each value in Array(5)
+                            .item
+                                .existence
+                                    label
+                                        input(type='checkbox' checked id='existence')
+                                        span.checkbox
+                                    a(href="../templates/item-page.html").item-image.object-fit
+                                        img(src="../images/tomato.jpg")
+                                .name
+                                    a(href="../templates/item-page.html").item-title Помидоры сочные
+                                .price <span class="main-price">65</span><span class="title">тг.</span>/<span class="weight">560</span>г. <a href="#" class="edit-icon"></a>
+                                .count
+                                    .count-field
+                                        .minus -
+                                        input(name="count" type="text" value='1')
+                                        .plus +
+                                .statistic
+                                    .order-count 40
+                                    .review-count 12
